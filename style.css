@@ -181,3 +181,26 @@ form .page .btns button.next{
   display: block;
   color: #fff;
 }
+.popup-error {
+  color: red;
+  font-size: 12px;
+  display: none; /* Inicialmente escondido */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+}
+
+.field {
+  position: relative;
+}
+
+input:invalid + .popup-error, select:invalid + .popup-error {
+  display: block; /* Exibe a mensagem de erro se o campo for inválido */
+}
+
+input:valid + .popup-error, select:valid + .popup-error {
+  display: none; /* Esconde a mensagem de erro se o campo for válido */
+}
+
+  
